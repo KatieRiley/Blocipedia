@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'bootstrap'
 gem 'figaro'
 gem 'pundit'
+gem 'faker'
 gem 'pry'
 
 group :development, :test do
