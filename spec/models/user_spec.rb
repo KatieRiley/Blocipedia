@@ -8,4 +8,10 @@ RSpec.describe User, type: :model do
       expect(user).to have_attributes(email: user.email)
     end
   end
+
+  describe "roles" do
+    it "is standard by default" do
+      expect(user.standard?).to be_truthy
+    end
+  end
 end

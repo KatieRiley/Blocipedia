@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap'
 gem 'figaro'
+gem 'pundit'
 gem 'pry'
 
 group :development, :test do
