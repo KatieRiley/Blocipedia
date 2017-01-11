@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1 class="text-center">Upgrading to a Premium Wiki Account</h1>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <h2 class="text-center">Private Wikis</h2>
+    <p>With a Premium membership you can post private wikis.</p>
+  </div>
+  <div class="col-md-4">
+    <h2 class="text-center">Add and delete users from you wikis.</h2>
+    <p>You get control over who can contribute to your wikis</p>
+  </div>
+  <div class="col-md-4">
+    <h2 class="text-center">One time low payment.</h2>
+    <p>The best part of being a premium member is that it is only $15.00!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 col-md-offset-5">
+
+    <%= form_tag charges_path do %>
+      <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%=@stripe_btn_data[:key] %>" data-amount="<%= @stripe_btn_data[:amount] %>" data-description="<%= @stripe_btn_data[:description] %>" ></script>
+    <% end %>
+  </div>
+</div>
