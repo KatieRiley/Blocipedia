@@ -1,6 +1,12 @@
 <h1>Edit Wiki</h1>
 <div class="row">
   <div class="col-md-8">
+    <p>Some tips if you want to use markdown:</p>
+    <ul>
+      <li>Use three back ticks before and after your code to create a code block. (```code```)</li>
+      <li>To bold something use two astricks before and after your text (**text to bold**)</li>
+      <li>To create block quotes insert a '>' before your text </li>
+    </ul>
     <%= form_for @wiki do |f| %>
       <div class="form-group">
         <%= f.label :title %>
