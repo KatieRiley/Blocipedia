@@ -1,0 +1,15 @@
+<% if current_user.premium? %>
+  <% User.all.each do |user| %>
+    <div class="user">
+      <% if collaborator = user.collaborator_for(wiki) %>
+        <%= link_to [wiki, user, collaborator], class: 'btn btn-danger', method: :delete do %>
+          <i class="glyphicon glyphicon-star-empty"> </i>&nbsp; Remove <%= user.email %>
+        <% end %>
+      <% else %>
+        <%= link_to [wiki, user, Collaborator.new], class: 'btn btn-primary', method: :post do %>
+          <i class="glyphicon glyphicon-star"> </i>&nbsp; Add <%= user.email %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

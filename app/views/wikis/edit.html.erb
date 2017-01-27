@@ -28,4 +28,8 @@
       </div>
     <% end %>
   </div>
+  <div class="col-md-4">
+    <p>Collaborators</p>
+    <%= render partial: 'collaborators/collaborator', locals: {wiki: @wiki} %>
+  </div>
 </div>
